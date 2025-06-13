@@ -1,5 +1,5 @@
 FROM python:3.9
-ADD main.py
+ADD main.py .
 RUN pip install requests
-CMD ["python", "main.py"]
+CMD ["python", "-u", "./main.py"]
 
