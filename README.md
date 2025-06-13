@@ -32,13 +32,22 @@ For my approach, I used synchronous API requests, meaning there will only ever b
 API requests simultaneously, but it has the potential to overwhelm the database or web server. I decided to err on the side of caution, and take a performance sacrifice. Learning the
 standards and procedures of the CityGeo team would help me balance performance with modesty.
 
-## Analysis
+The script took 55 minutes and 11 seconds to run.
 
+## Analysis
+Since the beginning of 2025, 18701 out of 226410 service requests were associated with Licenses & Inspections.
+
+Since the beginning of 2025, 5383 out of 18701, or 28.78% of service requests resulted in the issuance of a code violation.
+
+Since the beginning of 2025, 1384 of the 5383, or 25.71% of violations from service requests were marked as closed.
 
 ## Final Notes
 I've done similar work to this, using multiple APIs and joining data together, but only ever in informal situations, or in situations where performance is not critical. I lack knowledge of best
 practices in this field, and I would be happy to learn about the tools, libraries, and standards used by the team to improve my methods. I'm a quick learner, and I especially learn quick when
 I can read and analyze working examples of code, and adapt my style to match it.
+
+About atomic git commits - In my current team, we use trunk based development. We basically use the description of a merge request as the description of the changes, rather than commit messages.
+We had a relatively informal process, so I may need a bit more practice with writing detailed git commits.
 
 I am well aware that my script is quite slow, and that I may have interpreted parts of the prompt incorrectly. I hope that my writing here shows that I at least understand the bigger picture, and with
 minimal training could adapt my knowledge to design proper scripts.
