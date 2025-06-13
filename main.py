@@ -57,5 +57,5 @@ for matching_violation in matching_violations:
     if num_completed == len(matching_violation):
         num_closed_violations += 1
 
-write_analysis(f"Since the beginning of 2025, {num_closed_violations} of the {len(service_requests)}, or {100 * (num_closed_violations/len(service_requests)):.2f}% violations from service requests were marked as closed")
+write_analysis(f"Since the beginning of 2025, {num_closed_violations} of the {len(matching_violations)}, or {100 * (num_closed_violations/len(matching_violations)):.2f}% of violations from service requests were marked as closed")
 print('done')
