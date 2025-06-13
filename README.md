@@ -37,9 +37,9 @@ The script took 55 minutes and 11 seconds to run.
 ## Analysis
 Since the beginning of 2025, 18701 out of 226410 service requests were associated with Licenses & Inspections.
 
-Since the beginning of 2025, 5383 out of 18701, or 28.78% of service requests resulted in the issuance of a code violation.
+Since the beginning of 2025, 5383 out of 18701, or 28.78% of those service requests resulted in the issuance of a code violation.
 
-Since the beginning of 2025, 1384 of the 5383, or 25.71% of violations from service requests were marked as closed.
+Since the beginning of 2025, 1384 of the 5383, or 25.71% of violations from those service requests were marked as closed.
 
 ## Final Notes
 I've done similar work to this, using multiple APIs and joining data together, but only ever in informal situations, or in situations where performance is not critical. I lack knowledge of best
