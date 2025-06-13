@@ -6,11 +6,11 @@ When approaching a data integration task, there are many decisions to make, each
 
 First, I had to choose a language. I chose Python because I am familiar with it, CityGeo uses it, and it is common for statistical work.
 
-Next, I decided whether or not I would retrieve the data using APIs, or a CSV / other pre-downloaded format. In many ways, using pre-downloaded data can be beneficial, as
+Next, I decided whether I would retrieve the data using APIs or a CSV / other pre-downloaded format. In many ways, using pre-downloaded data can be beneficial, as
 you only need to download the data one time, not each time you run the script. However, I ultimately decided to use APIs because they are always live with
 current data, and they're more flexible in the event that additional directions or instructions come through. It does sacrifice speed, because APIs incur latency with each request.
 
-Analyzing the first prompt is straight forward, with little room for ambiguity. The second and third prompt, however, require a bit of creativity.
+Analyzing the first prompt is straight forward, with little room for ambiguity. The second and third prompt, however, require a bit of critical thinking.
 
 The second prompt asks for what percentage of service requests resulted in the issuance of a code violation. Looking at the fields available in the violations database, there is no direct
 entry that links a violation to the service request that instigated the violation. Insider knowledge of the Licenses & Inspections agency may provide insight as towards how they open cases,
@@ -21,7 +21,7 @@ a disclaimer.
 
 The third prompt asks about what percentage of those service requests that resulted in a code violation have been closed. There could be multiple interpretations of this as well. For example, we could
 look at whether, in the service requests database, the `status` is set to "Closed". However, the prompt specifies "(i.e. L&I has not finished inspecting them)", which might indicate that instead
-we should look at the violations associated with the service request, and see if its `casestatus` is set to "CLOSED", which might more accurately represent whether L%I considers the case closed.
+we should look at the violations associated with the service request, and see if its `casestatus` is set to "CLOSED", which might more accurately represent whether L&I considers the case closed.
 This also runs into another problem, where we may find multiple violations within one month of a service request at the same address. Insider knowledge of L&I could inform about whether all
 those violations could be from the same service request, or if they might have separated sources. For my approach, I decided to only determine a service request as closed if all violations opened
 within one month of it are closed.
